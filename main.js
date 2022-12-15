@@ -2,35 +2,36 @@
    // Test out the right click eventListener on a sentence in html
     // research the getSelection() window object
 document.addEventListener('DOMContentLoaded', () => {
-    alert('Hi');
-
     const body = document.querySelector('body');
     const testText = document.querySelector('h3');
-
+    console.log(testText.innerHTML.toString());
+​
     testText.style.width = '100px';
     testText.style.height = '30px';
-    // this.value = testText.value;
-    // let selection = document.getSelection();
-    // let selRange = selection.getRangeAt(0);
-    // let selectedText = selection.toString();
-
-    
-
+​
     testText.addEventListener('click', function () {
-        testText.setSelectionRange(0, testText.value.lastIndexOf('.'));
-        console.log(test);
+        var text = "";
+        if (window.getSelection) {
+            text = window.getSelection().toString();
+        } else if (document.selection && document.selection.type != "Control") {
+            text = document.selection.createRange().text;
+        }
+        console.log(text);
     })
-
+​
+    
+​
+​
+​
     // https://www.youtube.com/results?search_query=building+a+chrome+extension
     // https://www.youtube.com/results?search_query=
         
     
     
-
+​
     // testText.addEventListener('click', (c) => {
     //     console.log('clicked!')
-
+​
     // });
-
+​
 });
-    
