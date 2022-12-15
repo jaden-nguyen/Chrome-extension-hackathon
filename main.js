@@ -2,10 +2,11 @@
    // Test out the right click eventListener on a sentence in html
     // research the getSelection() window object
 document.addEventListener('DOMContentLoaded', () => {
+    alert('Hi');
+
     const body = document.querySelector('body');
     const testText = document.querySelector('h3');
-    testText.focus();
-    testText.setSelectionRange(3,3);
+
     testText.style.width = '100px';
     testText.style.height = '30px';
     // this.value = testText.value;
