@@ -1,0 +1,6 @@
+{
+    "manifest_version": 3,
+    "name": "Search with YouTube",
+    "description": "Search YouTube by right clicking some highlighted text",
+    "version": "0.1.0"
+}
